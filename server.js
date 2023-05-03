@@ -24,6 +24,9 @@ const clientRoutes = require('./routes/clients');
 
 
 //Endpoints
+app.use('/', (req, res) => {
+  res.send('Root - Success');
+});
 app.use('/clients', clientRoutes);
 
 
