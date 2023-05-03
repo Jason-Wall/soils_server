@@ -18,6 +18,14 @@ app.use(express.json());
 // Prevents cors errors
 app.use(cors());
 
+//EXPRESS
+// Routes for each resource
+const clientRoutes = require('./routes/clients');
+
+
+//Endpoints
+app.use('/clients', clientRoutes);
+
 
 // PORT LISTEN
 server.listen(port, () => {
