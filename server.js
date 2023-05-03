@@ -21,9 +21,11 @@ app.use(cors());
 //EXPRESS
 // Routes for each resource
 const clientRoutes = require('./routes/clients');
+const projectRoutes = require('./routes/projects');
 
 //Endpoints
 app.use('/clients', clientRoutes);
+app.use('/projects', projectRoutes);
 
 app.use('/', (req, res) => {
   res.send('Root - Success');

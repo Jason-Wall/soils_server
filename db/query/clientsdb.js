@@ -27,8 +27,8 @@ const getClientProjects = (clientId) => {
   };
   return db
     .query(queryObj)
-    .then(client => {
-      return client.rows;
+    .then(projects => {
+      return projects.rows;
     });
 };
 
