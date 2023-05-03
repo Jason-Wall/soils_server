@@ -8,28 +8,28 @@ const getAllSamples = () => {
     });
 };
 
-const getSample = (projectId) => {
+const getSample = (sampleId) => {
   const queryObj = {
     text: `SELECT * FROM samples WHERE id = $1;`,
-    values: [projectId]
+    values: [sampleId]
   };
   return db
     .query(queryObj)
-    .then(project => {
-      return project.rows;
+    .then(sample => {
+      return sample.rows;
     });
 };
 
-const getSamplePSD = (projectId) => {
+const getSamplepsd = (sampleId) => {
   const queryObj = {
-    text: `SELECT * FROM PSD WHERE project_id = $1;`,
-    values: [projectId]
+    text: `SELECT * FROM psd WHERE sample_id = $1;`,
+    values: [sampleId]
   };
   return db
     .query(queryObj)
-    .then(PSD => {
-      return PSD.rows;
+    .then(psd => {
+      return psd.rows;
     });
 };
 
-module.exports = { getAllSamples, getSample, getSamplePSD };
+module.exports = { getAllSamples, getSample, getSamplepsd };

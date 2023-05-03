@@ -29,7 +29,7 @@ router.get('/:id', (req, res) => {
     );
 });
 
-//GET /projects/:id/samples - get all sample data for a project
+//GET /projects/:id/psd - get all sample data for a project
 router.get('/:id/samples', (req, res) => {
   projects.getProjectSamples(req.params.id)
     .then((samplesJSON) => {
