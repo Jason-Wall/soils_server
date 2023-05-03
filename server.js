@@ -22,12 +22,12 @@ app.use(cors());
 // Routes for each resource
 const clientRoutes = require('./routes/clients');
 
-
 //Endpoints
+app.use('/clients', clientRoutes);
+
 app.use('/', (req, res) => {
   res.send('Root - Success');
 });
-app.use('/clients', clientRoutes);
 
 
 // PORT LISTEN

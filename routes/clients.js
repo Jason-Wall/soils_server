@@ -3,7 +3,7 @@ const router = express.Router();
 
 //GET /clients - get all clients
 router.get('/', (req, res) => {
-  res.send('Successful Route');
+  res.send('/clients - success');
 });
 
 module.exports = router;
