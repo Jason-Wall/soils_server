@@ -7,7 +7,7 @@ const cors = require('cors');
 //Create app/ server instance
 const app = express();
 const server = http.createServer(app);
-const port = 8001; // Define our base URL as http:\\localhost:8001
+const port = process.env.PORT || 8001; // Define our base URL as http:\\localhost:8001
 
 // Document network traffic to console.
 app.use(morgan("dev"));
@@ -31,6 +31,6 @@ app.use('/clients', clientRoutes);
 
 
 // PORT LISTEN
-server.listen(port, () => {
+server.listen(port, '0.0.0.0', () => {
   console.log(`app is listening on ${port}`);
 });
