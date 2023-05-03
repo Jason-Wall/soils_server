@@ -1,5 +1,5 @@
 // PG database client/connection setup
-require('dotenv').config();
+require('dotenv').config({ silent: true });
 const { Pool } = require('pg');
 
 const dbParams = {
