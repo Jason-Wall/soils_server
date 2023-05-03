@@ -1,13 +1,13 @@
 // PG database client/connection setup
-require('dotenv-vault-core').config();
+require('dotenv').config();
 const { Pool } = require('pg');
 
 const dbParams = {
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME,
-  port: process.env.DB_PORT
+  host: process.env.PGHOST,
+  user: process.env.PGUSER,
+  password: process.env.PGPASSWORD,
+  database: process.env.PGDATABASE,
+  port: process.env.PGPORT
 };
 
 const db = new Pool(dbParams);

@@ -1,5 +1,5 @@
 //Imports
-require('dotenv-vault-core').config();
+require('dotenv').config();
 const express = require('express');
 const http = require('http');
 const morgan = require('morgan');
