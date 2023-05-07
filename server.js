@@ -24,11 +24,13 @@ app.use(cors());
 const clientRoutes = require('./routes/clients');
 const projectRoutes = require('./routes/projects');
 const sampleRoutes = require('./routes/samples');
+const psdRoutes = require('./routes/psd');
 
 //Endpoints
 app.use('/clients', clientRoutes);
 app.use('/projects', projectRoutes);
 app.use('/samples', sampleRoutes);
+app.use('/psd', psdRoutes);
 
 app.use('/', (req, res) => {
   res.send('Root - Success');
